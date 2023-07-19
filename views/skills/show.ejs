@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <%- include('../partial-views/header') %>
-</head>
-<body>
-    <a href="/skills">Back</a>
-    <h1>Skill proficiency</h1>
-    <h2><%= skill.skill %> - <%= skill.proficiency %></h2>
-</body>
-</html>
+<%- include('../partials/header') %>
+    <h2><% console.log(console.log(skill),skill.proficiency) %><%= skill.skill %> - <%= skill.proficiency %></h2>
+<%- include('../partials/footer') %>

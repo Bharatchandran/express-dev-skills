@@ -1,15 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <%- include('../partial-views/header') %>
-</head>
-<body>
-    <a href="/">Back</a>
-    <h1>My Skills</h1>
+<%- include('../partials/header') %>
     <ul>
+
         <% skills.forEach(skill => { %>
-            <li> <a href="skills/<%= skill.id%>"><%= skill.skill%></a> </li>
+            <li> 
+                <form action="/skills/<%=skill.id%>?_method=DELETE" 
+                method="POST">
+                <button type="submit" >X</button>
+                <a href="skills/<%= skill.id%>"><%= skill.skill%></a>
+                </form>
+                 
+            </li>
         <% }) %>
     </ul>
-</body>
-</html>
+    <a href="/skills/new">Add Skills</a>
+<%- include('../partials/footer') %>
+
+
